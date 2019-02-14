@@ -38,9 +38,31 @@ var stationCmd = &cobra.Command{
 
 		lim, _ := cmd.Flags().GetString("limit")
 		if lim != "" {
-			lim = "&limit=" + lim
+			params.WriteString("&limit=" + lim)
 		}
-		printOut(webreq.WebreqStation(loc + lim))
+
+		b, _ := cmd.Flags().GetBool("bus")
+		if b {
+			params.WriteString("&transportations[]=bus")
+		}
+		b, _ = cmd.Flags().GetBool("tram")
+		if b {
+			params.WriteString("&transportations[]=tram")
+		}
+		b, _ = cmd.Flags().GetBool("train")
+		if b {
+			params.WriteString("&transportations[]=train")
+		}
+		b, _ = cmd.Flags().GetBool("ship")
+		if b {
+			params.WriteString("&transportations[]=ship")
+		}
+		b, _ = cmd.Flags().GetBool("cablecar")
+		if b {
+			params.WriteString("&transportations[]=cablecar")
+		}
+
+		printOut(webreq.WebreqStation(params.String()))
 	},
 }
 
@@ -57,6 +79,11 @@ func init() {
 	// is called directly, e.g.:
 	// stationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	stationCmd.Flags().StringP("limit", "l", "", "Number of departing connections to return.")
+	stationCmd.Flags().Bool("train", false, "Include trains")
+	stationCmd.Flags().Bool("tram", false, "Include trams")
+	stationCmd.Flags().Bool("bus", false, "Include buses")
+	stationCmd.Flags().Bool("ship", false, "Include ships")
+	stationCmd.Flags().Bool("cablecar", false, "Include cablecar")
 }
 
 func printOut(resp parseJSON.ResponseStation) {
