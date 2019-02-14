@@ -26,7 +26,9 @@ func WebreqStation(args string) parseJSON.ResponseStation {
 }
 
 func webreq(resourceURL string, args string) []byte {
-	resp, err := http.Get(BaseURL + resourceURL + args)
+	wr := BaseURL + resourceURL + args
+	fmt.Printf("GET %s\n", wr)
+	resp, err := http.Get(wr)
 	if err != nil {
 		log.Fatal(err)
 	}
