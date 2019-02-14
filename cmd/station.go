@@ -9,11 +9,18 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
+	"fmt"
+	"log"
+	"os"
+	"strings"
+	"text/tabwriter"
+	"time"
+
+	"github.com/morgulbrut/transportCli/webreq/parseJSON"
+
 	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
 )
-
-const resourceURL string = "/v1/stationboard"
 
 // stationCmd represents the station command
 var stationCmd = &cobra.Command{
@@ -27,14 +34,14 @@ var stationCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		loc := "?station=Bern"
 		if len(args) > 0 {
-			loc = "?station=" + args[0]
+			loc = "?station=" + strings.Join(args, "%20")
 		}
 
 		lim, _ := cmd.Flags().GetString("limit")
 		if lim != "" {
 			lim = "&limit=" + lim
 		}
-		webreq.Webreq(webreq.BaseURL + resourceURL + loc + lim)
+		printOut(webreq.WebreqStation(loc + lim))
 	},
 }
 
@@ -51,4 +58,23 @@ func init() {
 	// is called directly, e.g.:
 	// stationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	stationCmd.Flags().StringP("limit", "l", "", "Number of departing connections to return.")
+}
+
+func printOut(resp parseJSON.ResponseStation) {
+	const padding = 3
+	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
+
+	for _, ele := range resp.Stationboard {
+		fmt.Println(ele.Stop.Departure)
+		tfs := "2006-01-02T15:04:05-0700"
+		t, err := time.Parse(tfs, ele.Stop.Departure)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(t)
+		output := fmt.Sprintf("%v:%v\t %s \t %s", t.Hour(), t.Minute(), ele.To, ele.Name)
+
+		fmt.Fprintln(w, output)
+	}
+	w.Flush()
 }

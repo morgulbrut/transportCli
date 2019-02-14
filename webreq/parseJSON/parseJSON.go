@@ -3,6 +3,7 @@ package parseJSON
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 type Coordinate struct {
@@ -28,18 +29,47 @@ type Prognosis struct {
 }
 
 type Stop struct {
-	Station            Station
-	Arrival            string
-	ArrivalTimestamp   int
-	Departure          string
-	DepartureTimestamp int
-	Delay              string
-	Platform           string
-	Prognosis          Prognosis
+	Station              Station
+	Arrival              string
+	ArrivalTimestamp     int64
+	Departure            string
+	DepartureTimestamp   int64
+	Delay                string
+	Platform             string
+	Prognosis            Prognosis
+	RealtimeAvailability string
+	Location             Station
+	Distance             float64
 }
 
-func ParseJSON(data []byte) {
-	json.MarshalIndent(data, "", "    ")
+type Stationboard struct {
+	Stop         Stop
+	Name         string
+	Category     string
+	Subcategory  string
+	CategoryCode string
+	Number       string
+	Operator     string
+	To           string
+	Capacity1st  string
+	Capacity2nd  string
+	Passlist     []Stop
+}
+
+type ResponseStation struct {
+	Station      Station
+	Stationboard []Stationboard
+}
+
+func ParseStation(data []byte) ResponseStation {
+	var resp ResponseStation
+
+	err := json.Unmarshal(data, &resp)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	//fmt.Printf("%+v", resp)
+	return resp
 }
 
 func prettyprint(b []byte) ([]byte, error) {
