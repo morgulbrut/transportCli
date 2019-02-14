@@ -9,10 +9,11 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
 )
+
+const resourceURL string = "/v1/stationboard"
 
 // stationCmd represents the station command
 var stationCmd = &cobra.Command{
@@ -24,8 +25,16 @@ var stationCmd = &cobra.Command{
 
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
-		//fmt.Println("station called")
-		fmt.Printf("http://transport.opendata.ch/v1/stationboard?station=%s\n", args[0])
+		loc := "?station=Bern"
+		if len(args) > 0 {
+			loc = "?station=" + args[0]
+		}
+
+		lim, _ := cmd.Flags().GetString("limit")
+		if lim != "" {
+			lim = "&limit=" + lim
+		}
+		webreq.Webreq(webreq.BaseURL + resourceURL + loc + lim)
 	},
 }
 
@@ -41,4 +50,5 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// stationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	stationCmd.Flags().StringP("limit", "l", "", "Number of departing connections to return.")
 }
