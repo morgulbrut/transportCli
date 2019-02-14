@@ -90,15 +90,16 @@ func printOut(resp parseJSON.ResponseStation) {
 	const padding = 3
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
 	fmt.Printf("\nStationtable for %s\n\n", resp.Station.Name)
-	fmt.Fprintln(w, "Time \t Destination \t Platform \t Train No")
+	fmt.Fprintln(w, "Time \t Destination \t Platform \t Number")
 	fmt.Fprintln(w, " \t \t \t ")
 
 	for _, ele := range resp.Stationboard {
 		tfs := "2006-01-02T15:04:05-0700"
 		t, _ := time.Parse(tfs, ele.Stop.Departure)
-		output := fmt.Sprintf("%02d:%02d\t %s \t %s \t %s", t.Hour(), t.Minute(), ele.To, ele.Stop.Platform, ele.Name)
+		output := fmt.Sprintf("%02d:%02d\t %s \t %s \t %s %s", t.Hour(), t.Minute(), ele.To, ele.Stop.Platform, ele.Category, ele.Number)
 
 		fmt.Fprintln(w, output)
 	}
 	w.Flush()
+	fmt.Println()
 }
