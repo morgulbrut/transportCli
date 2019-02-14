@@ -31,9 +31,9 @@ var stationCmd = &cobra.Command{
 
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
-		loc := "?station=Bern"
+		var params strings.Builder
 		if len(args) > 0 {
-			loc = "?station=" + strings.Join(args, "%20")
+			params.WriteString("?station=" + strings.Join(args, "%20"))
 		}
 
 		lim, _ := cmd.Flags().GetString("limit")
