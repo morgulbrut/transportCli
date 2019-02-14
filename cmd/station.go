@@ -10,7 +10,6 @@ package cmd
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"strings"
 	"text/tabwriter"
@@ -63,16 +62,14 @@ func init() {
 func printOut(resp parseJSON.ResponseStation) {
 	const padding = 3
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
+	fmt.Printf("\nStationtable for %s\n\n", resp.Station.Name)
+	fmt.Fprintln(w, "Time \t Destination \t Platform \t Train No")
+	fmt.Fprintln(w, " \t \t \t ")
 
 	for _, ele := range resp.Stationboard {
-		fmt.Println(ele.Stop.Departure)
 		tfs := "2006-01-02T15:04:05-0700"
-		t, err := time.Parse(tfs, ele.Stop.Departure)
-		if err != nil {
-			log.Fatal(err)
-		}
-		fmt.Println(t)
-		output := fmt.Sprintf("%v:%v\t %s \t %s", t.Hour(), t.Minute(), ele.To, ele.Name)
+		t, _ := time.Parse(tfs, ele.Stop.Departure)
+		output := fmt.Sprintf("%02d:%02d\t %s \t %s \t %s", t.Hour(), t.Minute(), ele.To, ele.Stop.Platform, ele.Name)
 
 		fmt.Fprintln(w, output)
 	}
