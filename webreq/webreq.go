@@ -17,16 +17,22 @@ import (
 	"github.com/morgulbrut/transportCli/webreq/parseJSON"
 )
 
-const BaseURL string = "http://transport.opendata.ch"
+const baseURL string = "http://transport.opendata.ch"
 const stationURL string = "/v1/stationboard"
+const locationURL string = "/v1/locations"
 
-func WebreqStation(args string) parseJSON.ResponseStation {
+func Station(args string) parseJSON.RespStation {
 	body := webreq(stationURL, args)
 	return parseJSON.ParseStation(body)
 }
 
+func Location(args string) parseJSON.RespLocation {
+	body := webreq(locationURL, args)
+	return parseJSON.ParseLocation(body)
+}
+
 func webreq(resourceURL string, args string) []byte {
-	wr := BaseURL + resourceURL + args
+	wr := baseURL + resourceURL + args
 	fmt.Printf("GET %s\n", wr)
 	resp, err := http.Get(wr)
 	if err != nil {

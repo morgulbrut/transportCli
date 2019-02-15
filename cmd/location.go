@@ -9,6 +9,9 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
+	"fmt"
+
+	"github.com/morgulbrut/transportCli/webreq/parseJSON"
 	"github.com/spf13/cobra"
 )
 
@@ -36,4 +39,11 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// locationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+}
+
+func PrintOut(resp parseJSON.RespLocation) {
+	fmt.Println(len(resp.Locations))
+	for _, ele := range resp.Locations {
+		fmt.Println(ele.Name)
+	}
 }

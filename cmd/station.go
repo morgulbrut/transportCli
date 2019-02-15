@@ -62,7 +62,7 @@ var stationCmd = &cobra.Command{
 			params.WriteString("&transportations[]=cablecar")
 		}
 
-		printOut(webreq.WebreqStation(params.String()))
+		printOut(webreq.Station(params.String()))
 	},
 }
 
@@ -86,7 +86,7 @@ func init() {
 	stationCmd.Flags().Bool("cablecar", false, "Include cablecar")
 }
 
-func printOut(resp parseJSON.ResponseStation) {
+func printOut(resp parseJSON.RespStation) {
 	const padding = 3
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
 	fmt.Printf("\nStationtable for %s\n\n", resp.Station.Name)
@@ -95,8 +95,8 @@ func printOut(resp parseJSON.ResponseStation) {
 
 	for _, ele := range resp.Stationboard {
 		tfs := "2006-01-02T15:04:05-0700"
-		t, _ := time.Parse(tfs, ele.Stop.Departure)
-		output := fmt.Sprintf("%02d:%02d\t %s \t %s \t %s %s", t.Hour(), t.Minute(), ele.To, ele.Stop.Platform, ele.Category, ele.Number)
+		t, _ := time.Parse(tfs, ele.PassList[0].Departure)
+		output := fmt.Sprintf("%02d:%02d\t %s \t %s \t %s %s", t.Hour(), t.Minute(), ele.To, ele.PassList[0].Platform, ele.Category, ele.Number)
 
 		fmt.Fprintln(w, output)
 	}

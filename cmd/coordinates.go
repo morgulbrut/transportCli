@@ -9,8 +9,7 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
 )
 
@@ -25,7 +24,8 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("coordinates called")
+
+		PrintOut(webreq.Location("?x=" + args[0] + "&y=" + args[1]))
 	},
 }
 
