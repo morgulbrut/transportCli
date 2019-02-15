@@ -76,7 +76,6 @@ func ParseStation(data []byte) ResponseStation {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-	//fmt.Printf("%+v", resp)
 	return resp
 }
 
