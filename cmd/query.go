@@ -9,8 +9,9 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
-	"fmt"
+	"strings"
 
+	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
 )
 
@@ -20,7 +21,7 @@ var queryCmd = &cobra.Command{
 	Short: "Returns nearby stations trough a query.",
 	Long:  `The query can be either a POI, a station or an adress, returns nearby stations`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("query called")
+		PrintLoc(webreq.Location("?query=" + strings.Join(args, "%20") + "&type=station"))
 	},
 }
 

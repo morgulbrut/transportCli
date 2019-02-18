@@ -10,6 +10,8 @@ package cmd
 
 import (
 	"fmt"
+	"os"
+	"text/tabwriter"
 
 	"github.com/morgulbrut/transportCli/webreq/parsejson"
 	"github.com/spf13/cobra"
@@ -36,9 +38,18 @@ func init() {
 	// locationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-func PrintOut(resp parsejson.RespLocation) {
-	fmt.Println(len(resp.Locations))
-	for _, ele := range resp.Locations {
-		fmt.Println(ele.Name)
+func PrintLoc(resp parsejson.RespLocation) {
+	const padding = 3
+	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
+	fmt.Printf("\nNearby Stations\n\n")
+	fmt.Fprintln(w, "Name \t Coordinates \tDistance")
+	fmt.Fprintln(w, " \t \t ")
+
+	for _, ele := range resp.Stations {
+		output := fmt.Sprintf("%s \t %f %f  \t %d m", ele.Name, ele.Coordinates.X, ele.Coordinates.Y, ele.Distance)
+
+		fmt.Fprintln(w, output)
 	}
+	w.Flush()
+	fmt.Println()
 }
