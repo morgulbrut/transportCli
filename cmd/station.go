@@ -15,7 +15,7 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/morgulbrut/transportCli/webreq/parseJSON"
+	"github.com/morgulbrut/transportCli/webreq/parsejson"
 
 	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
@@ -86,7 +86,7 @@ func init() {
 	stationCmd.Flags().Bool("cablecar", false, "Include cablecar")
 }
 
-func printOut(resp parseJSON.RespStation) {
+func printOut(resp parsejson.RespStation) {
 	const padding = 3
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
 	fmt.Printf("\nStationtable for %s\n\n", resp.Station.Name)

@@ -6,7 +6,7 @@ as published by Sam Hocevar. See the LICENSE file or
  http://www.wtfpl.net/ for more details.
 */
 
-package parseJSON
+package parsejson
 
 import (
 	"bytes"
@@ -14,6 +14,7 @@ import (
 	"fmt"
 )
 
+// ParseLocation parses a given JSON int a RespLocation
 func ParseLocation(data []byte) RespLocation {
 	var resp RespLocation
 
@@ -21,11 +22,12 @@ func ParseLocation(data []byte) RespLocation {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-	fmt.Printf("Body\n%s\n", resp)
+	//fmt.Printf("Body\n%s\n", resp)
 
 	return resp
 }
 
+// ParseStation parses a given JSON int a RespStation
 func ParseStation(data []byte) RespStation {
 	var resp RespStation
 

@@ -11,7 +11,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/morgulbrut/transportCli/webreq/parseJSON"
+	"github.com/morgulbrut/transportCli/webreq/parsejson"
 	"github.com/spf13/cobra"
 )
 
@@ -41,7 +41,7 @@ func init() {
 	// locationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-func PrintOut(resp parseJSON.RespLocation) {
+func PrintOut(resp parsejson.RespLocation) {
 	fmt.Println(len(resp.Locations))
 	for _, ele := range resp.Locations {
 		fmt.Println(ele.Name)

@@ -14,21 +14,23 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/morgulbrut/transportCli/webreq/parseJSON"
+	"github.com/morgulbrut/transportCli/webreq/parsejson"
 )
 
 const baseURL string = "http://transport.opendata.ch"
 const stationURL string = "/v1/stationboard"
 const locationURL string = "/v1/locations"
 
-func Station(args string) parseJSON.RespStation {
+// Station does the API call for a station and returns a RespStation object
+func Station(args string) parsejson.RespStation {
 	body := webreq(stationURL, args)
-	return parseJSON.ParseStation(body)
+	return parsejson.ParseStation(body)
 }
 
-func Location(args string) parseJSON.RespLocation {
+// Location does the API call for a location and returns a RespLocation object
+func Location(args string) parsejson.RespLocation {
 	body := webreq(locationURL, args)
-	return parseJSON.ParseLocation(body)
+	return parsejson.ParseLocation(body)
 }
 
 func webreq(resourceURL string, args string) []byte {
