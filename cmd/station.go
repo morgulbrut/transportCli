@@ -39,6 +39,8 @@ var stationCmd = &cobra.Command{
 		lim, _ := cmd.Flags().GetString("limit")
 		if lim != "" {
 			params.WriteString("&limit=" + lim)
+		} else { // default
+			params.WriteString("&limit=10")
 		}
 
 		b, _ := cmd.Flags().GetBool("bus")
