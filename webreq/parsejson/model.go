@@ -11,7 +11,6 @@ package parsejson
 // Location represents a API location object
 type Location struct {
 	ID          string
-	Type        string
 	Name        string
 	Score       string
 	Coordinates Coordinate
@@ -90,7 +89,7 @@ type RespStation struct {
 
 // RespLocation represents a response of a location API call
 type RespLocation struct {
-	Locations []Location
+	Stations []Location
 }
 
 // RespConnection represents a response of a connection API call
