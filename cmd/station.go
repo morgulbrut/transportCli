@@ -15,9 +15,9 @@ import (
 	"text/tabwriter"
 	"time"
 
+	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/morgulbrut/transportCli/webreq/parsejson"
 
-	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
 )
 
