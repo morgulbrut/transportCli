@@ -17,13 +17,8 @@ import (
 // queryCmd represents the query command
 var queryCmd = &cobra.Command{
 	Use:   "query",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Returns nearby stations trough a query.",
+	Long:  `The query can be either a POI, a station or an adress, returns nearby stations`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("query called")
 	},

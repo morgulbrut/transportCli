@@ -24,8 +24,8 @@ import (
 // stationCmd represents the station command
 var stationCmd = &cobra.Command{
 	Use:   "station",
-	Short: "Returns the next connections leaving from a specific location.",
-	Long: `Returns the next connections leaving from a specific location.
+	Short: "Returns the next connections leaving from a specific station.",
+	Long: `Returns the next connections leaving from a specific station.
 	
 	Example: transportCli station Bern
 

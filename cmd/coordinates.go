@@ -10,21 +10,16 @@ package cmd
 
 import (
 	"github.com/morgulbrut/transportCli/webreq"
+
 	"github.com/spf13/cobra"
 )
 
 // coordinatesCmd represents the coordinates command
 var coordinatesCmd = &cobra.Command{
 	Use:   "coordinates",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Returns nearby stations trough coordinates.",
+	Long:  `Coordinates in lat lon format, returns nearby stations`,
 	Run: func(cmd *cobra.Command, args []string) {
-
 		PrintOut(webreq.Location("?x=" + args[0] + "&y=" + args[1]))
 	},
 }
