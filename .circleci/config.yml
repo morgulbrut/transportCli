@@ -24,5 +24,9 @@ jobs:
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
       #- run: go test -v ./...
+      - run: env GOOS=windows GOARCH=amd64 go build
       - run: go build
-      - run: GOOS=linux go build
+      - store_artifacts:
+          path: ./transportCli
+      - store_artifacts:
+          path: ./transportCli.exe
