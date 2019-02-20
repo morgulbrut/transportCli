@@ -63,6 +63,10 @@ var stationCmd = &cobra.Command{
 		if b {
 			params.WriteString("&transportations[]=cablecar")
 		}
+		// b, _ = cmd.Flags().GetBool("arrival")
+		// if b {
+		// 	params.WriteString("&type=arrival")
+		// }
 
 		printOut(webreq.Station(params.String()))
 	},
@@ -86,12 +90,14 @@ func init() {
 	stationCmd.Flags().Bool("bus", false, "Include buses")
 	stationCmd.Flags().Bool("ship", false, "Include ships")
 	stationCmd.Flags().Bool("cablecar", false, "Include cablecar")
+	//stationCmd.Flags().Bool("arrival", false, "Show arrival table")
 }
 
 func printOut(resp parsejson.RespStation) {
 	const padding = 3
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
 	fmt.Printf("\nStationtable for %s\n\n", resp.Station.Name)
+
 	fmt.Fprintln(w, "Time \t Destination \t Platform \t Number")
 	fmt.Fprintln(w, " \t \t \t ")
 
