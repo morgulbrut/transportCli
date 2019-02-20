@@ -11,6 +11,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"runtime"
 	"strings"
 	"time"
 
@@ -98,8 +99,12 @@ func printOut(resp parsejson.RespStation) {
 
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
-	t.SetStyle(table.StyleBold)
-	t.AppendHeader(table.Row{"Time", "Destination", "Destination", "Category ", "Number"})
+	if runtime.GOOS == "windows" {
+		t.SetStyle(table.StyleDouble)
+	} else {
+		t.SetStyle(table.StyleColoredDark)
+	}
+	t.AppendHeader(table.Row{"Time", "Destination", "Platform", "Category ", "Number"})
 
 	for _, ele := range resp.Stationboard {
 		tfs := "2006-01-02T15:04:05-0700"

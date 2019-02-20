@@ -11,6 +11,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"runtime"
 
 	"github.com/jedib0t/go-pretty/table"
 	"github.com/morgulbrut/transportCli/webreq/parsejson"
@@ -42,7 +43,11 @@ func PrintLoc(resp parsejson.RespLocation) {
 
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
-	t.SetStyle(table.StyleBold)
+	if runtime.GOOS == "windows" {
+		t.SetStyle(table.StyleDouble)
+	} else {
+		t.SetStyle(table.StyleColoredDark)
+	}
 	t.AppendHeader(table.Row{"Name", "Coordinates", "Distance"})
 
 	for _, ele := range resp.Stations {
