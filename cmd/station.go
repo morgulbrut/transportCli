@@ -27,9 +27,17 @@ import (
 var stationCmd = &cobra.Command{
 	Use:   "station",
 	Short: "Returns the next connections leaving from a specific station.",
-	Long: `Returns the next connections leaving from a specific station.
+	Long: `
+    _____                                          _____     _______________ ________
+    __  /________________ ________________ __________  /_    __  ____/___  / ____  _/
+    _  __/__  ___/__  __ \__  ___/___  __ \__  ___/_  __/    _  /     __  /   __  /  
+    / /_  _  /    _  / / /_(__  ) __  /_/ /_  /    / /_      / /___   _  /_____/ /   
+    \__/  /_/     /_/ /_/ /____/  _  .___/ /_/     \__/      \____/   /_____//___/   
+                                  /_/                                               
+Returns the next connections leaving from a specific station.
 	
-	Example: transportCli station Bern
+	Example: 	transportCli station Bad Ragaz
+				transportCli station "Bad Ragaz"
 
 	`,
 	Run: func(cmd *cobra.Command, args []string) {

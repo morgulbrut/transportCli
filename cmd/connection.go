@@ -17,13 +17,20 @@ import (
 // connectionCmd represents the connection command
 var connectionCmd = &cobra.Command{
 	Use:   "connection",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Returns connections between two station",
+	Long: `
+    _____                                          _____     _______________ ________
+    __  /________________ ________________ __________  /_    __  ____/___  / ____  _/
+    _  __/__  ___/__  __ \__  ___/___  __ \__  ___/_  __/    _  /     __  /   __  /  
+    / /_  _  /    _  / / /_(__  ) __  /_/ /_  /    / /_      / /___   _  /_____/ /   
+    \__/  /_/     /_/ /_/ /____/  _  .___/ /_/     \__/      \____/   /_____//___/   
+                                  /_/                                          
+Returns connections between two station, needs two stations.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+Stationnames longer than one word must be written in quotation marks. 
+
+	Example: 	transportCli station "Bad Ragaz" Zürich
+	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("connection called")
 	},

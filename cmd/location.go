@@ -22,7 +22,14 @@ import (
 var locationCmd = &cobra.Command{
 	Use:   "location",
 	Short: "Returns nearby stations.",
-	Long:  `Returns nearby stations either trough a query or trough coordinates`,
+	Long: `
+    _____                                          _____     _______________ ________
+    __  /________________ ________________ __________  /_    __  ____/___  / ____  _/
+    _  __/__  ___/__  __ \__  ___/___  __ \__  ___/_  __/    _  /     __  /   __  /  
+    / /_  _  /    _  / / /_(__  ) __  /_/ /_  /    / /_      / /___   _  /_____/ /   
+    \__/  /_/     /_/ /_/ /____/  _  .___/ /_/     \__/      \____/   /_____//___/   
+                                  /_/                                   
+Returns nearby stations either trough a query or trough coordinates`,
 }
 
 func init() {

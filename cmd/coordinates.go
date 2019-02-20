@@ -18,7 +18,14 @@ import (
 var coordinatesCmd = &cobra.Command{
 	Use:   "coordinates",
 	Short: "Returns nearby stations trough coordinates.",
-	Long:  `Coordinates in lat lon format, returns nearby stations`,
+	Long: `
+    _____                                          _____     _______________ ________
+    __  /________________ ________________ __________  /_    __  ____/___  / ____  _/
+    _  __/__  ___/__  __ \__  ___/___  __ \__  ___/_  __/    _  /     __  /   __  /  
+    / /_  _  /    _  / / /_(__  ) __  /_/ /_  /    / /_      / /___   _  /_____/ /   
+    \__/  /_/     /_/ /_/ /____/  _  .___/ /_/     \__/      \____/   /_____//___/   
+                                  /_/                                                 
+Coordinates in lat lon format, returns nearby stations`,
 	Run: func(cmd *cobra.Command, args []string) {
 		PrintLoc(webreq.Location("?x=" + args[0] + "&y=" + args[1]))
 	},

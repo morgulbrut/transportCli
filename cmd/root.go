@@ -23,7 +23,14 @@ var cfgFile string
 var rootCmd = &cobra.Command{
 	Use:   "transportCli",
 	Short: "A simple CLI to the transport API.",
-	Long: `A simple CLI to the transport API.
+	Long: `
+    _____                                          _____     _______________ ________
+    __  /________________ ________________ __________  /_    __  ____/___  / ____  _/
+    _  __/__  ___/__  __ \__  ___/___  __ \__  ___/_  __/    _  /     __  /   __  /  
+    / /_  _  /    _  / / /_(__  ) __  /_/ /_  /    / /_      / /___   _  /_____/ /   
+    \__/  /_/     /_/ /_/ /____/  _  .___/ /_/     \__/      \____/   /_____//___/   
+                                  /_/                                                
+A simple CLI to the transport API.
 
 	Because why not.`,
 	// Uncomment the following line if your bare application
