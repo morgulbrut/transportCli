@@ -23,6 +23,12 @@ const stationURL string = "/v1/stationboard"
 const locationURL string = "/v1/locations"
 
 // Station does the API call for a station and returns a RespStation object
+func Connection(args string) parsejson.RespConnection {
+	body := webreq(stationURL, args)
+	return parsejson.ParseConnection(body)
+}
+
+// Station does the API call for a station and returns a RespStation object
 func Station(args string) parsejson.RespStation {
 	body := webreq(stationURL, args)
 	return parsejson.ParseStation(body)

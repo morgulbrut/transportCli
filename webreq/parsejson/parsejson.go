@@ -14,6 +14,19 @@ import (
 	"fmt"
 )
 
+// ParseConnection parses a given JSON int a RespConnection
+func ParseConnection(data []byte) RespConnection {
+	var resp RespConnection
+
+	err := json.Unmarshal(data, &resp)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	//fmt.Printf("Body\n%s\n", resp)
+
+	return resp
+}
+
 // ParseLocation parses a given JSON int a RespLocation
 func ParseLocation(data []byte) RespLocation {
 	var resp RespLocation

@@ -10,6 +10,7 @@ package cmd
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -32,7 +33,21 @@ Stationnames longer than one word must be written in quotation marks.
 	Example: 	transportCli station "Bad Ragaz" Zürich
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("connection called")
+		var params strings.Builder
+		if len(args) == 2 {
+			fmt.Println(args[0], args[1])
+
+			params.WriteString("?from=" + args[0] + "&to=" + args[1])
+		} else {
+			cmd.Help()
+		}
+
+		lim, _ := cmd.Flags().GetString("limit")
+		if lim != "" {
+			params.WriteString("&limit=" + lim)
+		} else { // default
+			params.WriteString("&limit=10")
+		}
 	},
 }
 
@@ -48,4 +63,6 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// connectionCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	connectionCmd.Flags().StringP("limit", "l", "", "Number of departing connections to return.")
+
 }
