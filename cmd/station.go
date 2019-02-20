@@ -36,7 +36,7 @@ Returns the next connections leaving from a specific station.
 	Run: func(cmd *cobra.Command, args []string) {
 		var params strings.Builder
 		if len(args) > 0 {
-			params.WriteString("?station=" + strings.Join(args, "%20"))
+			params.WriteString("?station=" + strings.Join(args, " "))
 		}
 
 		lim, _ := cmd.Flags().GetString("limit")

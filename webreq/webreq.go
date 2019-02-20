@@ -13,6 +13,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/morgulbrut/transportCli/webreq/parsejson"
 )
@@ -34,7 +35,8 @@ func Location(args string) parsejson.RespLocation {
 }
 
 func webreq(resourceURL string, args string) []byte {
-	wr := baseURL + resourceURL + args
+	a := strings.Replace(args, " ", "%20", -1)
+	wr := baseURL + resourceURL + a
 	fmt.Printf("GET %s\n", wr)
 	resp, err := http.Get(wr)
 	if err != nil {
