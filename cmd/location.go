@@ -11,8 +11,8 @@ package cmd
 import (
 	"fmt"
 	"os"
-	"text/tabwriter"
 
+	"github.com/jedib0t/go-pretty/table"
 	"github.com/morgulbrut/transportCli/webreq/parsejson"
 	"github.com/spf13/cobra"
 )
@@ -39,17 +39,15 @@ func init() {
 }
 
 func PrintLoc(resp parsejson.RespLocation) {
-	const padding = 3
-	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
-	fmt.Printf("\nNearby Stations\n\n")
-	fmt.Fprintln(w, "Name \t Coordinates \tDistance")
-	fmt.Fprintln(w, " \t \t ")
+
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	t.SetStyle(table.StyleBold)
+	t.AppendHeader(table.Row{"Name", "Coordinates", "Distance"})
 
 	for _, ele := range resp.Stations {
-		output := fmt.Sprintf("%s \t %f %f  \t %d m", ele.Name, ele.Coordinates.X, ele.Coordinates.Y, ele.Distance)
-
-		fmt.Fprintln(w, output)
+		coords := fmt.Sprintf(" %f %f", ele.Coordinates.X, ele.Coordinates.Y)
+		t.AppendRow(table.Row{ele.Name, coords, ele.Distance})
 	}
-	w.Flush()
-	fmt.Println()
+	t.Render()
 }

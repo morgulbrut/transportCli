@@ -12,13 +12,14 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"text/tabwriter"
 	"time"
 
 	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/morgulbrut/transportCli/webreq/parsejson"
 
 	"github.com/spf13/cobra"
+
+	"github.com/jedib0t/go-pretty/table"
 )
 
 // stationCmd represents the station command
@@ -94,20 +95,18 @@ func init() {
 }
 
 func printOut(resp parsejson.RespStation) {
-	const padding = 3
-	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', tabwriter.Debug)
-	fmt.Printf("\nStationtable for %s\n\n", resp.Station.Name)
 
-	fmt.Fprintln(w, "Time \t Destination \t Platform \t Number")
-	fmt.Fprintln(w, " \t \t \t ")
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	t.SetStyle(table.StyleBold)
+	t.AppendHeader(table.Row{"Time", "Destination", "Destination", "Category ", "Number"})
 
 	for _, ele := range resp.Stationboard {
 		tfs := "2006-01-02T15:04:05-0700"
-		t, _ := time.Parse(tfs, ele.PassList[0].Departure)
-		output := fmt.Sprintf("%02d:%02d\t %s \t %s \t %s %s", t.Hour(), t.Minute(), ele.To, ele.PassList[0].Platform, ele.Category, ele.Number)
-
-		fmt.Fprintln(w, output)
+		tm, _ := time.Parse(tfs, ele.PassList[0].Departure)
+		tms := fmt.Sprintf("%02d:%02d", tm.Hour(), tm.Minute())
+		t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
 	}
-	w.Flush()
+	t.Render()
 	fmt.Println()
 }
