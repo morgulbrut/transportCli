@@ -21,10 +21,11 @@ import (
 const baseURL string = "http://transport.opendata.ch"
 const stationURL string = "/v1/stationboard"
 const locationURL string = "/v1/locations"
+const connectionsURL string = "/v1/connections"
 
 // Station does the API call for a station and returns a RespStation object
 func Connection(args string) parsejson.RespConnection {
-	body := webreq(stationURL, args)
+	body := webreq(connectionsURL, args)
 	return parsejson.ParseConnection(body)
 }
 

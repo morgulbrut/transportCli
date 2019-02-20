@@ -9,9 +9,9 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
-	"fmt"
 	"strings"
 
+	"github.com/morgulbrut/transportCli/webreq"
 	"github.com/spf13/cobra"
 )
 
@@ -35,9 +35,9 @@ Stationnames longer than one word must be written in quotation marks.
 	Run: func(cmd *cobra.Command, args []string) {
 		var params strings.Builder
 		if len(args) == 2 {
-			fmt.Println(args[0], args[1])
-
 			params.WriteString("?from=" + args[0] + "&to=" + args[1])
+		} else if len(args) == 1 {
+			params.WriteString("?station=" + args[0])
 		} else {
 			cmd.Help()
 		}
@@ -46,7 +46,13 @@ Stationnames longer than one word must be written in quotation marks.
 		if lim != "" {
 			params.WriteString("&limit=" + lim)
 		} else { // default
-			params.WriteString("&limit=10")
+			params.WriteString("&limit=1")
+		}
+
+		if len(args) == 2 {
+			PrintConnection(webreq.Connection(params.String()))
+		} else if len(args) == 1 {
+			PrintStation(webreq.Station(params.String()))
 		}
 	},
 }

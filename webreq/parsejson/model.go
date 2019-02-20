@@ -33,6 +33,7 @@ type Connection struct {
 	Products    []string
 	Capacity1st string
 	Capacity2nd string
+	Sections    []Journey
 }
 
 // Service represents a API service object
@@ -55,7 +56,7 @@ type Stop struct {
 	Station   Location
 	Arrival   string
 	Departure string
-	Delay     string
+	Delay     int
 	Platform  string
 	Prognosis Prognosis
 }
