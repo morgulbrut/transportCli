@@ -9,18 +9,11 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
-	"fmt"
-	"os"
-	"runtime"
 	"strings"
-	"time"
 
 	"github.com/morgulbrut/transportCli/webreq"
-	"github.com/morgulbrut/transportCli/webreq/parsejson"
 
 	"github.com/spf13/cobra"
-
-	"github.com/jedib0t/go-pretty/table"
 )
 
 // stationCmd represents the station command
@@ -78,7 +71,7 @@ Returns the next connections leaving from a specific station.
 		// 	params.WriteString("&type=arrival")
 		// }
 
-		printOut(webreq.Station(params.String()))
+		PrintStation(webreq.Station(params.String()))
 	},
 }
 
@@ -101,25 +94,4 @@ func init() {
 	stationCmd.Flags().Bool("ship", false, "Include ships")
 	stationCmd.Flags().Bool("cablecar", false, "Include cablecar")
 	//stationCmd.Flags().Bool("arrival", false, "Show arrival table")
-}
-
-func printOut(resp parsejson.RespStation) {
-
-	t := table.NewWriter()
-	t.SetOutputMirror(os.Stdout)
-	if runtime.GOOS == "windows" {
-		t.SetStyle(table.StyleDouble)
-	} else {
-		t.SetStyle(table.StyleColoredDark)
-	}
-	t.AppendHeader(table.Row{"Time", "Destination", "Platform", "Category ", "Number"})
-
-	for _, ele := range resp.Stationboard {
-		tfs := "2006-01-02T15:04:05-0700"
-		tm, _ := time.Parse(tfs, ele.PassList[0].Departure)
-		tms := fmt.Sprintf("%02d:%02d", tm.Hour(), tm.Minute())
-		t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
-	}
-	t.Render()
-	fmt.Println()
 }

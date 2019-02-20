@@ -21,7 +21,7 @@ var queryCmd = &cobra.Command{
 	Short: "Returns nearby stations trough a query.",
 	Long:  `The query can be either a POI, a station or an adress, returns nearby stations`,
 	Run: func(cmd *cobra.Command, args []string) {
-		PrintLoc(webreq.Location("?query=" + strings.Join(args, "%20") + "&type=station"))
+		PrintLocation(webreq.Location("?query=" + strings.Join(args, "%20") + "&type=station"))
 	},
 }
 

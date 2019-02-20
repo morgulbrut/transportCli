@@ -27,7 +27,7 @@ var coordinatesCmd = &cobra.Command{
                                   /_/                                                 
 Coordinates in lat lon format, returns nearby stations`,
 	Run: func(cmd *cobra.Command, args []string) {
-		PrintLoc(webreq.Location("?x=" + args[0] + "&y=" + args[1]))
+		PrintLocation(webreq.Location("?x=" + args[0] + "&y=" + args[1]))
 	},
 }
 

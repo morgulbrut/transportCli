@@ -9,12 +9,6 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
-	"fmt"
-	"os"
-	"runtime"
-
-	"github.com/jedib0t/go-pretty/table"
-	"github.com/morgulbrut/transportCli/webreq/parsejson"
 	"github.com/spf13/cobra"
 )
 
@@ -44,22 +38,4 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// locationCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-}
-
-func PrintLoc(resp parsejson.RespLocation) {
-
-	t := table.NewWriter()
-	t.SetOutputMirror(os.Stdout)
-	if runtime.GOOS == "windows" {
-		t.SetStyle(table.StyleDouble)
-	} else {
-		t.SetStyle(table.StyleColoredDark)
-	}
-	t.AppendHeader(table.Row{"Name", "Coordinates", "Distance"})
-
-	for _, ele := range resp.Stations {
-		coords := fmt.Sprintf(" %f %f", ele.Coordinates.X, ele.Coordinates.Y)
-		t.AppendRow(table.Row{ele.Name, coords, ele.Distance})
-	}
-	t.Render()
 }

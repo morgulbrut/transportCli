@@ -11,8 +11,12 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"runtime"
+	"time"
 
+	"github.com/jedib0t/go-pretty/table"
 	homedir "github.com/mitchellh/go-homedir"
+	"github.com/morgulbrut/transportCli/webreq/parsejson"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -84,4 +88,64 @@ func initConfig() {
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
 	}
+}
+
+func PrintStation(resp parsejson.RespStation) {
+
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	if runtime.GOOS == "windows" {
+		t.SetStyle(table.StyleDouble)
+	} else {
+		t.SetStyle(table.StyleColoredDark)
+	}
+	t.AppendHeader(table.Row{"Time", "Destination", "Platform", "Category ", "Number"})
+
+	for _, ele := range resp.Stationboard {
+		tfs := "2006-01-02T15:04:05-0700"
+		tm, _ := time.Parse(tfs, ele.PassList[0].Departure)
+		tms := fmt.Sprintf("%02d:%02d", tm.Hour(), tm.Minute())
+		t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
+	}
+	t.Render()
+	fmt.Println()
+}
+
+func PrintConnection(resp parsejson.RespConnection) {
+
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	if runtime.GOOS == "windows" {
+		t.SetStyle(table.StyleDouble)
+	} else {
+		t.SetStyle(table.StyleColoredDark)
+	}
+	t.AppendHeader(table.Row{"Time", "Destination", "Platform", "Category ", "Number"})
+
+	//for _, ele := range resp.Connections {
+	//tfs := "2006-01-02T15:04:05-0700"
+	//tm, _ := time.Parse(tfs, ele.PassList[0].Departure)
+	//tms := fmt.Sprintf("%02d:%02d", tm.Hour(), tm.Minute())
+	//t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
+	//}
+	t.Render()
+	fmt.Println()
+}
+
+func PrintLocation(resp parsejson.RespLocation) {
+
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	if runtime.GOOS == "windows" {
+		t.SetStyle(table.StyleDouble)
+	} else {
+		t.SetStyle(table.StyleColoredDark)
+	}
+	t.AppendHeader(table.Row{"Name", "Coordinates", "Distance"})
+
+	for _, ele := range resp.Stations {
+		coords := fmt.Sprintf(" %f %f", ele.Coordinates.X, ele.Coordinates.Y)
+		t.AppendRow(table.Row{ele.Name, coords, ele.Distance})
+	}
+	t.Render()
 }
