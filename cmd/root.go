@@ -108,7 +108,6 @@ func PrintStation(resp parsejson.RespStation) {
 		t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
 	}
 	t.Render()
-	fmt.Println()
 }
 
 func PrintConnection(resp parsejson.RespConnection) {
@@ -134,7 +133,6 @@ func PrintConnection(resp parsejson.RespConnection) {
 		t.AppendRow(table.Row{ele.From.Station.Name, tds, ele.From.Platform, ele.To.Station.Name, tas, ele.To.Platform, durs, ele.Sections})
 	}
 	t.Render()
-	fmt.Println()
 }
 
 func PrintLocation(resp parsejson.RespLocation) {

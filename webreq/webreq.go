@@ -44,7 +44,7 @@ func Location(args string) parsejson.RespLocation {
 func webreq(resourceURL string, args string) []byte {
 	a := strings.Replace(args, " ", "%20", -1)
 	wr := baseURL + resourceURL + a
-	fmt.Printf("GET %s\n", wr)
+	fmt.Printf("\nGET %s\n\n", wr)
 	resp, err := http.Get(wr)
 	if err != nil {
 		log.Fatal(err)
