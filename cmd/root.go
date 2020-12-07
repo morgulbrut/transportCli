@@ -119,7 +119,8 @@ func PrintConnection(resp parsejson.RespConnection) {
 	} else {
 		t.SetStyle(table.StyleColoredDark)
 	}
-	t.AppendHeader(table.Row{"Departure", "Time", "Platform", "Arrival", "Time", "Platform", "Duration", "Changes"})
+	//t.AppendHeader(table.Row{"Departure", "Time", "Platform", "Arrival", "Time", "Platform", "Duration", "Changes"})
+	t.AppendHeader(table.Row{"Departure", "Time", "Platform", "Arrival", "Time", "Platform", "Duration"})
 
 	for _, ele := range resp.Connections {
 		tfs := "2006-01-02T15:04:05-0700"
@@ -130,7 +131,8 @@ func PrintConnection(resp parsejson.RespConnection) {
 		tas := fmt.Sprintf("%02d:%02d", ta.Hour(), ta.Minute())
 		durs := fmt.Sprintf("%02d:%02d", int(dur.Hours()), int(dur.Minutes())%60)
 		//t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
-		t.AppendRow(table.Row{ele.From.Station.Name, tds, ele.From.Platform, ele.To.Station.Name, tas, ele.To.Platform, durs, ele.Sections})
+		//t.AppendRow(table.Row{ele.From.Station.Name, tds, ele.From.Platform, ele.To.Station.Name, tas, ele.To.Platform, durs, ele.Sections})
+		t.AppendRow(table.Row{ele.From.Station.Name, tds, ele.From.Platform, ele.To.Station.Name, tas, ele.To.Platform, durs})
 	}
 	t.Render()
 }
