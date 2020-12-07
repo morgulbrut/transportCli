@@ -49,6 +49,11 @@ Stationnames longer than one word must be written in quotation marks.
 			params.WriteString("&limit=1")
 		}
 
+		time, _ := cmd.Flags().GetString("time")
+		if time != "" {
+			params.WriteString("&time=" + time)
+		}
+
 		if len(args) == 2 {
 			PrintConnection(webreq.Connection(params.String()))
 		} else if len(args) == 1 {
@@ -70,5 +75,6 @@ func init() {
 	// is called directly, e.g.:
 	// connectionCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	connectionCmd.Flags().StringP("limit", "l", "", "Number of departing connections to return.")
+	connectionCmd.Flags().StringP("time", "t", "", "Time of the earliest connection.")
 
 }
