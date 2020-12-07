@@ -8,92 +8,153 @@ as published by Sam Hocevar. See the LICENSE file or
 
 package parsejson
 
-// Location represents a API location object
-type Location struct {
-	ID          string
-	Name        string
-	Score       string
-	Coordinates Coordinate
-	Distance    int
-}
-
-// Coordinate represents a API coordinate object
-type Coordinate struct {
-	Type string
-	X    float64
-	Y    float64
-}
-
-// Connection represents a API connection object
-type Connection struct {
-	From        Stop
-	To          Stop
-	Duration    string
-	Service     Service
-	Products    []string
-	Capacity1st string
-	Capacity2nd string
-	Sections    []Journey
-}
-
-// Service represents a API service object
-type Service struct {
-	Regular   string
-	Irregular string
-}
-
-// Prognosis represents a API prognosis object
-type Prognosis struct {
-	Platform    string
-	Arrival     string
-	Departure   string
-	Capacity1st string
-	Capacity2nd string
-}
-
-// Stop represents a API stop object
-type Stop struct {
-	Station   Location
-	Arrival   string
-	Departure string
-	Delay     int
-	Platform  string
-	Prognosis Prognosis
-}
-
-// Section represents a API section object
-type Section struct {
-	Journey   Journey
-	Walk      string
-	Departure Stop
-	Arrival   Stop
-}
-
-// Journey represents a API journey object
-type Journey struct {
-	Name         string
-	Category     string
-	CategoryCode string
-	Number       string
-	Operator     string
-	To           string
-	PassList     []Stop
-	Capacity1st  string
-	Capacity2nd  string
-}
-
-// RespStation represents a response of a station API call
-type RespStation struct {
-	Station      Location
-	Stationboard []Journey
-}
-
-// RespLocation represents a response of a location API call
-type RespLocation struct {
-	Stations []Location
-}
-
-// RespConnection represents a response of a connection API call
 type RespConnection struct {
-	Connections []Connection
+	Connections []Connections `json:"connections"`
+	From        Stop          `json:"from"`
+	To          Stop          `json:"to"`
+	Stations    Stations      `json:"stations"`
+}
+
+type Journey struct {
+	Name         string      `json:"name"`
+	Category     string      `json:"category"`
+	Subcategory  interface{} `json:"subcategory"`
+	CategoryCode interface{} `json:"categoryCode"`
+	Number       string      `json:"number"`
+	Operator     string      `json:"operator"`
+	To           string      `json:"to"`
+	PassList     []PassList  `json:"passList"`
+	Capacity1St  interface{} `json:"capacity1st"`
+	Capacity2Nd  interface{} `json:"capacity2nd"`
+}
+type Departure struct {
+	Station              Station     `json:"station"`
+	Arrival              interface{} `json:"arrival"`
+	ArrivalTimestamp     interface{} `json:"arrivalTimestamp"`
+	Departure            string      `json:"departure"`
+	DepartureTimestamp   int         `json:"departureTimestamp"`
+	Delay                int         `json:"delay"`
+	Platform             string      `json:"platform"`
+	Prognosis            Prognosis   `json:"prognosis"`
+	RealtimeAvailability interface{} `json:"realtimeAvailability"`
+	Location             Location    `json:"location"`
+}
+type Arrival struct {
+	Station              Station     `json:"station"`
+	Arrival              string      `json:"arrival"`
+	ArrivalTimestamp     int         `json:"arrivalTimestamp"`
+	Departure            interface{} `json:"departure"`
+	DepartureTimestamp   interface{} `json:"departureTimestamp"`
+	Delay                int         `json:"delay"`
+	Platform             string      `json:"platform"`
+	Prognosis            Prognosis   `json:"prognosis"`
+	RealtimeAvailability interface{} `json:"realtimeAvailability"`
+	Location             Location    `json:"location"`
+}
+type Sections struct {
+	Journey   Journey     `json:"journey"`
+	Walk      interface{} `json:"walk"`
+	Departure Departure   `json:"departure"`
+	Arrival   Arrival     `json:"arrival"`
+}
+type Connections struct {
+	From        Stop        `json:"from"`
+	To          Stop        `json:"to"`
+	Duration    string      `json:"duration"`
+	Transfers   int         `json:"transfers"`
+	Service     interface{} `json:"service"`
+	Products    []string    `json:"products"`
+	Capacity1St interface{} `json:"capacity1st"`
+	Capacity2Nd interface{} `json:"capacity2nd"`
+	Sections    []Sections  `json:"sections"`
+}
+type From struct {
+	ID         string      `json:"id"`
+	Name       string      `json:"name"`
+	Score      interface{} `json:"score"`
+	Coordinate Coordinate  `json:"coordinate"`
+	Distance   interface{} `json:"distance"`
+}
+type To struct {
+	ID         string      `json:"id"`
+	Name       string      `json:"name"`
+	Score      interface{} `json:"score"`
+	Coordinate Coordinate  `json:"coordinate"`
+	Distance   interface{} `json:"distance"`
+}
+type Stations struct {
+	From []From `json:"from"`
+	To   []To   `json:"to"`
+}
+
+type RespStation struct {
+	Station      Station        `json:"station"`
+	Stationboard []Stationboard `json:"stationboard"`
+}
+type Coordinate struct {
+	Type string  `json:"type"`
+	X    float64 `json:"x"`
+	Y    float64 `json:"y"`
+}
+type Station struct {
+	ID         string      `json:"id"`
+	Name       string      `json:"name"`
+	Score      interface{} `json:"score"`
+	Coordinate Coordinate  `json:"coordinate"`
+	Distance   interface{} `json:"distance"`
+}
+type Prognosis struct {
+	Platform    interface{} `json:"platform"`
+	Arrival     interface{} `json:"arrival"`
+	Departure   interface{} `json:"departure"`
+	Capacity1St interface{} `json:"capacity1st"`
+	Capacity2Nd interface{} `json:"capacity2nd"`
+}
+type Location struct {
+	ID         string      `json:"id"`
+	Name       interface{} `json:"name"`
+	Score      interface{} `json:"score"`
+	Coordinate Coordinate  `json:"coordinate"`
+	Distance   interface{} `json:"distance"`
+}
+type Stop struct {
+	Station              Station     `json:"station"`
+	Arrival              interface{} `json:"arrival"`
+	ArrivalTimestamp     interface{} `json:"arrivalTimestamp"`
+	Departure            string      `json:"departure"`
+	DepartureTimestamp   int         `json:"departureTimestamp"`
+	Delay                interface{} `json:"delay"`
+	Platform             string      `json:"platform"`
+	Prognosis            Prognosis   `json:"prognosis"`
+	RealtimeAvailability interface{} `json:"realtimeAvailability"`
+	Location             Location    `json:"location"`
+}
+type PassList struct {
+	Station              Station     `json:"station"`
+	Arrival              interface{} `json:"arrival"`
+	ArrivalTimestamp     interface{} `json:"arrivalTimestamp"`
+	Departure            string      `json:"departure"`
+	DepartureTimestamp   int         `json:"departureTimestamp"`
+	Delay                interface{} `json:"delay"`
+	Platform             string      `json:"platform"`
+	Prognosis            Prognosis   `json:"prognosis"`
+	RealtimeAvailability interface{} `json:"realtimeAvailability"`
+	Location             Location    `json:"location"`
+}
+type Stationboard struct {
+	Stop         Stop        `json:"stop"`
+	Name         string      `json:"name"`
+	Category     string      `json:"category"`
+	Subcategory  interface{} `json:"subcategory"`
+	CategoryCode interface{} `json:"categoryCode"`
+	Number       string      `json:"number"`
+	Operator     string      `json:"operator"`
+	To           string      `json:"to"`
+	PassList     []PassList  `json:"passList"`
+	Capacity1St  interface{} `json:"capacity1st"`
+	Capacity2Nd  interface{} `json:"capacity2nd"`
+}
+
+type RespLocation struct {
+	Stations []Stations `json:"stations"`
 }
