@@ -1,0 +1,2682 @@
+{
+    "connections": [
+      {
+        "from": {
+          "station": {
+            "id": "8509002",
+            "name": "Landquart",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 46.967437,
+              "y": 9.554043
+            },
+            "distance": null
+          },
+          "arrival": null,
+          "arrivalTimestamp": null,
+          "departure": "2020-12-07T17:25:00+0100",
+          "departureTimestamp": 1607358300,
+          "delay": 1,
+          "platform": "3",
+          "prognosis": {
+            "platform": null,
+            "arrival": null,
+            "departure": "2020-12-07T17:26:00+0100",
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "realtimeAvailability": null,
+          "location": {
+            "id": "8509002",
+            "name": "Landquart",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 46.967437,
+              "y": 9.554043
+            },
+            "distance": null
+          }
+        },
+        "to": {
+          "station": {
+            "id": "8503227",
+            "name": "Näfels-Mollis",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 47.098717,
+              "y": 9.069958
+            },
+            "distance": null
+          },
+          "arrival": "2020-12-07T18:08:00+0100",
+          "arrivalTimestamp": 1607360880,
+          "departure": null,
+          "departureTimestamp": null,
+          "delay": null,
+          "platform": "10",
+          "prognosis": {
+            "platform": null,
+            "arrival": null,
+            "departure": null,
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "realtimeAvailability": null,
+          "location": {
+            "id": "8503227",
+            "name": "Näfels-Mollis",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 47.098717,
+              "y": 9.069958
+            },
+            "distance": null
+          }
+        },
+        "duration": "00d00:42:00",
+        "transfers": 1,
+        "service": null,
+        "products": [
+          "RE",
+          "S6"
+        ],
+        "capacity1st": null,
+        "capacity2nd": null,
+        "sections": [
+          {
+            "journey": {
+              "name": "RE 3480",
+              "category": "RE",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "RE 3480",
+              "operator": "SBB",
+              "to": "Zürich HB",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8509002",
+                    "name": "Landquart",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 46.967437,
+                      "y": 9.554043
+                    },
+                    "distance": null
+                  },
+                  "arrival": null,
+                  "arrivalTimestamp": null,
+                  "departure": "2020-12-07T17:25:00+0100",
+                  "departureTimestamp": 1607358300,
+                  "delay": 1,
+                  "platform": "3",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:26:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509002",
+                    "name": "Landquart",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 46.967437,
+                      "y": 9.554043
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509004",
+                    "name": "Bad Ragaz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.01025,
+                      "y": 9.505294
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:30:00+0100",
+                  "arrivalTimestamp": 1607358600,
+                  "departure": "2020-12-07T17:31:00+0100",
+                  "departureTimestamp": 1607358660,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:31:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509004",
+                    "name": "Bad Ragaz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.01025,
+                      "y": 9.505294
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:35:00+0100",
+                  "arrivalTimestamp": 1607358900,
+                  "departure": "2020-12-07T17:37:00+0100",
+                  "departureTimestamp": 1607359020,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:37:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509414",
+                    "name": "Walenstadt",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.119869,
+                      "y": 9.312985
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:45:00+0100",
+                  "arrivalTimestamp": 1607359500,
+                  "departure": "2020-12-07T17:45:00+0100",
+                  "departureTimestamp": 1607359500,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:45:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509414",
+                    "name": "Walenstadt",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.119869,
+                      "y": 9.312985
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:58:00+0100",
+                  "arrivalTimestamp": 1607360280,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": 0,
+                  "platform": "6",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": "2020-12-07T17:58:00+0100",
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8509002",
+                "name": "Landquart",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 46.967437,
+                  "y": 9.554043
+                },
+                "distance": null
+              },
+              "arrival": null,
+              "arrivalTimestamp": null,
+              "departure": "2020-12-07T17:25:00+0100",
+              "departureTimestamp": 1607358300,
+              "delay": 1,
+              "platform": "3",
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": "2020-12-07T17:26:00+0100",
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8509002",
+                "name": "Landquart",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 46.967437,
+                  "y": 9.554043
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T17:58:00+0100",
+              "arrivalTimestamp": 1607360280,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": 0,
+              "platform": "6",
+              "prognosis": {
+                "platform": null,
+                "arrival": "2020-12-07T17:58:00+0100",
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              }
+            }
+          },
+          {
+            "journey": {
+              "name": "S6 11661",
+              "category": "S",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "6",
+              "operator": "SBB",
+              "to": "Schwanden GL",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:58:00+0100",
+                  "arrivalTimestamp": 1607360280,
+                  "departure": "2020-12-07T18:03:00+0100",
+                  "departureTimestamp": 1607360580,
+                  "delay": 0,
+                  "platform": "10",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:03:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503226",
+                    "name": "Nieder- und Oberurnen",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.12236,
+                      "y": 9.062387
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:05:00+0100",
+                  "arrivalTimestamp": 1607360700,
+                  "departure": "2020-12-07T18:05:00+0100",
+                  "departureTimestamp": 1607360700,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:05:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503226",
+                    "name": "Nieder- und Oberurnen",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.12236,
+                      "y": 9.062387
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503227",
+                    "name": "Näfels-Mollis",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.098717,
+                      "y": 9.069958
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:08:00+0100",
+                  "arrivalTimestamp": 1607360880,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": 0,
+                  "platform": "1",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": "2020-12-07T18:08:00+0100",
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503227",
+                    "name": "Näfels-Mollis",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.098717,
+                      "y": 9.069958
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T17:58:00+0100",
+              "arrivalTimestamp": 1607360280,
+              "departure": "2020-12-07T18:03:00+0100",
+              "departureTimestamp": 1607360580,
+              "delay": 0,
+              "platform": "10",
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": "2020-12-07T18:03:00+0100",
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8503227",
+                "name": "Näfels-Mollis",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.098717,
+                  "y": 9.069958
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:08:00+0100",
+              "arrivalTimestamp": 1607360880,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": 0,
+              "platform": "1",
+              "prognosis": {
+                "platform": null,
+                "arrival": "2020-12-07T18:08:00+0100",
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503227",
+                "name": "Näfels-Mollis",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.098717,
+                  "y": 9.069958
+                },
+                "distance": null
+              }
+            }
+          }
+        ]
+      },
+      {
+        "from": {
+          "station": {
+            "id": "8509002",
+            "name": "Landquart",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 46.967437,
+              "y": 9.554043
+            },
+            "distance": null
+          },
+          "arrival": null,
+          "arrivalTimestamp": null,
+          "departure": "2020-12-07T17:39:00+0100",
+          "departureTimestamp": 1607359140,
+          "delay": 1,
+          "platform": "4",
+          "prognosis": {
+            "platform": null,
+            "arrival": null,
+            "departure": "2020-12-07T17:40:00+0100",
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "realtimeAvailability": null,
+          "location": {
+            "id": "8509002",
+            "name": "Landquart",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 46.967437,
+              "y": 9.554043
+            },
+            "distance": null
+          }
+        },
+        "to": {
+          "station": {
+            "id": "8573887",
+            "name": "Näfels-Mollis, Bahnhof",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 47.098494,
+              "y": 9.069806
+            },
+            "distance": null
+          },
+          "arrival": "2020-12-07T18:48:00+0100",
+          "arrivalTimestamp": 1607363280,
+          "departure": null,
+          "departureTimestamp": null,
+          "delay": null,
+          "platform": null,
+          "prognosis": {
+            "platform": null,
+            "arrival": null,
+            "departure": null,
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "realtimeAvailability": null,
+          "location": {
+            "id": "8573887",
+            "name": "Näfels-Mollis, Bahnhof",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 47.098494,
+              "y": 9.069806
+            },
+            "distance": null
+          }
+        },
+        "duration": "00d01:08:00",
+        "transfers": 2,
+        "service": null,
+        "products": [
+          "S12",
+          "S4",
+          "511"
+        ],
+        "capacity1st": null,
+        "capacity2nd": null,
+        "sections": [
+          {
+            "journey": {
+              "name": "S12 12266",
+              "category": "S",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "12",
+              "operator": "THURBO",
+              "to": "Sargans",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8509002",
+                    "name": "Landquart",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 46.967437,
+                      "y": 9.554043
+                    },
+                    "distance": null
+                  },
+                  "arrival": null,
+                  "arrivalTimestamp": null,
+                  "departure": "2020-12-07T17:39:00+0100",
+                  "departureTimestamp": 1607359140,
+                  "delay": 1,
+                  "platform": "4",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:40:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509002",
+                    "name": "Landquart",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 46.967437,
+                      "y": 9.554043
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509003",
+                    "name": "Maienfeld",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.003841,
+                      "y": 9.529224
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:42:00+0100",
+                  "arrivalTimestamp": 1607359320,
+                  "departure": "2020-12-07T17:42:00+0100",
+                  "departureTimestamp": 1607359320,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:43:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509003",
+                    "name": "Maienfeld",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.003841,
+                      "y": 9.529224
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509004",
+                    "name": "Bad Ragaz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.01025,
+                      "y": 9.505294
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:45:00+0100",
+                  "arrivalTimestamp": 1607359500,
+                  "departure": "2020-12-07T17:45:00+0100",
+                  "departureTimestamp": 1607359500,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T17:46:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509004",
+                    "name": "Bad Ragaz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.01025,
+                      "y": 9.505294
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:51:00+0100",
+                  "arrivalTimestamp": 1607359860,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": 0,
+                  "platform": "6",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": "2020-12-07T17:51:00+0100",
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8509002",
+                "name": "Landquart",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 46.967437,
+                  "y": 9.554043
+                },
+                "distance": null
+              },
+              "arrival": null,
+              "arrivalTimestamp": null,
+              "departure": "2020-12-07T17:39:00+0100",
+              "departureTimestamp": 1607359140,
+              "delay": 1,
+              "platform": "4",
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": "2020-12-07T17:40:00+0100",
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8509002",
+                "name": "Landquart",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 46.967437,
+                  "y": 9.554043
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8509411",
+                "name": "Sargans",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.045353,
+                  "y": 9.445396
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T17:51:00+0100",
+              "arrivalTimestamp": 1607359860,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": 0,
+              "platform": "6",
+              "prognosis": {
+                "platform": null,
+                "arrival": "2020-12-07T17:51:00+0100",
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8509411",
+                "name": "Sargans",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.045353,
+                  "y": 9.445396
+                },
+                "distance": null
+              }
+            }
+          },
+          {
+            "journey": {
+              "name": "S4 11465",
+              "category": "S",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "4",
+              "operator": "SOB-sob",
+              "to": "Uznach",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T17:51:00+0100",
+                  "arrivalTimestamp": 1607359860,
+                  "departure": "2020-12-07T18:02:00+0100",
+                  "departureTimestamp": 1607360520,
+                  "delay": 0,
+                  "platform": "4",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:02:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509412",
+                    "name": "Mels",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.053742,
+                      "y": 9.41776
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:04:00+0100",
+                  "arrivalTimestamp": 1607360640,
+                  "departure": "2020-12-07T18:04:00+0100",
+                  "departureTimestamp": 1607360640,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:05:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509412",
+                    "name": "Mels",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.053742,
+                      "y": 9.41776
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509413",
+                    "name": "Flums",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.096611,
+                      "y": 9.34793
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:08:00+0100",
+                  "arrivalTimestamp": 1607360880,
+                  "departure": "2020-12-07T18:08:00+0100",
+                  "departureTimestamp": 1607360880,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:09:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509413",
+                    "name": "Flums",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.096611,
+                      "y": 9.34793
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509414",
+                    "name": "Walenstadt",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.119869,
+                      "y": 9.312985
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:12:00+0100",
+                  "arrivalTimestamp": 1607361120,
+                  "departure": "2020-12-07T18:12:00+0100",
+                  "departureTimestamp": 1607361120,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:12:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509414",
+                    "name": "Walenstadt",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.119869,
+                      "y": 9.312985
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509415",
+                    "name": "Mols",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.112986,
+                      "y": 9.276817
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:14:00+0100",
+                  "arrivalTimestamp": 1607361240,
+                  "departure": "2020-12-07T18:14:00+0100",
+                  "departureTimestamp": 1607361240,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:15:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509415",
+                    "name": "Mols",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.112986,
+                      "y": 9.276817
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509416",
+                    "name": "Unterterzen",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.113854,
+                      "y": 9.255021
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:16:00+0100",
+                  "arrivalTimestamp": 1607361360,
+                  "departure": "2020-12-07T18:16:00+0100",
+                  "departureTimestamp": 1607361360,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:17:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509416",
+                    "name": "Unterterzen",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.113854,
+                      "y": 9.255021
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509417",
+                    "name": "Murg",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.113174,
+                      "y": 9.215038
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:19:00+0100",
+                  "arrivalTimestamp": 1607361540,
+                  "departure": "2020-12-07T18:19:00+0100",
+                  "departureTimestamp": 1607361540,
+                  "delay": 1,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:20:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509417",
+                    "name": "Murg",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.113174,
+                      "y": 9.215038
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509418",
+                    "name": "Mühlehorn",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.117838,
+                      "y": 9.173015
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:24:00+0100",
+                  "arrivalTimestamp": 1607361840,
+                  "departure": "2020-12-07T18:24:00+0100",
+                  "departureTimestamp": 1607361840,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:24:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509418",
+                    "name": "Mühlehorn",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.117838,
+                      "y": 9.173015
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:30:00+0100",
+                  "arrivalTimestamp": 1607362200,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": 0,
+                  "platform": "6",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": "2020-12-07T18:30:00+0100",
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8509411",
+                "name": "Sargans",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.045353,
+                  "y": 9.445396
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T17:51:00+0100",
+              "arrivalTimestamp": 1607359860,
+              "departure": "2020-12-07T18:02:00+0100",
+              "departureTimestamp": 1607360520,
+              "delay": 0,
+              "platform": "4",
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": "2020-12-07T18:02:00+0100",
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8509411",
+                "name": "Sargans",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.045353,
+                  "y": 9.445396
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:30:00+0100",
+              "arrivalTimestamp": 1607362200,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": 0,
+              "platform": "6",
+              "prognosis": {
+                "platform": null,
+                "arrival": "2020-12-07T18:30:00+0100",
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              }
+            }
+          },
+          {
+            "journey": null,
+            "walk": {
+              "duration": 180
+            },
+            "departure": {
+              "station": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:30:00+0100",
+              "arrivalTimestamp": 1607362200,
+              "departure": "2020-12-07T18:30:00+0100",
+              "departureTimestamp": 1607362200,
+              "delay": null,
+              "platform": null,
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8595640",
+                "name": "Ziegelbrücke, Bahnhof Süd",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136576,
+                  "y": 9.05914
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:33:00+0100",
+              "arrivalTimestamp": 1607362380,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": null,
+              "platform": null,
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8595640",
+                "name": "Ziegelbrücke, Bahnhof Süd",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136576,
+                  "y": 9.05914
+                },
+                "distance": null
+              }
+            }
+          },
+          {
+            "journey": {
+              "name": "B 130",
+              "category": "B",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "511",
+              "operator": "PAG",
+              "to": "Mühlehorn, Bahnhof",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8595640",
+                    "name": "Ziegelbrücke, Bahnhof Süd",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136576,
+                      "y": 9.05914
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:33:00+0100",
+                  "arrivalTimestamp": 1607362380,
+                  "departure": "2020-12-07T18:34:00+0100",
+                  "departureTimestamp": 1607362440,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8595640",
+                    "name": "Ziegelbrücke, Bahnhof Süd",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136576,
+                      "y": 9.05914
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8579550",
+                    "name": "Ziegelbrücke, Post",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.133472,
+                      "y": 9.061643
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:35:00+0100",
+                  "arrivalTimestamp": 1607362500,
+                  "departure": "2020-12-07T18:35:00+0100",
+                  "departureTimestamp": 1607362500,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8579550",
+                    "name": "Ziegelbrücke, Post",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.133472,
+                      "y": 9.061643
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8587509",
+                    "name": "Niederurnen, Ziegelbrückstr.",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.128118,
+                      "y": 9.055957
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:36:00+0100",
+                  "arrivalTimestamp": 1607362560,
+                  "departure": "2020-12-07T18:36:00+0100",
+                  "departureTimestamp": 1607362560,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8587509",
+                    "name": "Niederurnen, Ziegelbrückstr.",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.128118,
+                      "y": 9.055957
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8587510",
+                    "name": "Niederurnen, Ochsenplatz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.125925,
+                      "y": 9.053268
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:37:00+0100",
+                  "arrivalTimestamp": 1607362620,
+                  "departure": "2020-12-07T18:37:00+0100",
+                  "departureTimestamp": 1607362620,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8587510",
+                    "name": "Niederurnen, Ochsenplatz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.125925,
+                      "y": 9.053268
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8577809",
+                    "name": "Niederurnen, Friedhof",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.12198,
+                      "y": 9.053584
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:38:00+0100",
+                  "arrivalTimestamp": 1607362680,
+                  "departure": "2020-12-07T18:38:00+0100",
+                  "departureTimestamp": 1607362680,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8577809",
+                    "name": "Niederurnen, Friedhof",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.12198,
+                      "y": 9.053584
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8577863",
+                    "name": "Oberurnen, im Horn",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.117668,
+                      "y": 9.059517
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:39:00+0100",
+                  "arrivalTimestamp": 1607362740,
+                  "departure": "2020-12-07T18:39:00+0100",
+                  "departureTimestamp": 1607362740,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8577863",
+                    "name": "Oberurnen, im Horn",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.117668,
+                      "y": 9.059517
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8573884",
+                    "name": "Oberurnen, Feuerwehrplatz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.114243,
+                      "y": 9.05994
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:40:00+0100",
+                  "arrivalTimestamp": 1607362800,
+                  "departure": "2020-12-07T18:40:00+0100",
+                  "departureTimestamp": 1607362800,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8573884",
+                    "name": "Oberurnen, Feuerwehrplatz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.114243,
+                      "y": 9.05994
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8579534",
+                    "name": "Oberurnen, im Grütli",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.111426,
+                      "y": 9.061963
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:41:00+0100",
+                  "arrivalTimestamp": 1607362860,
+                  "departure": "2020-12-07T18:41:00+0100",
+                  "departureTimestamp": 1607362860,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8579534",
+                    "name": "Oberurnen, im Grütli",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.111426,
+                      "y": 9.061963
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8573885",
+                    "name": "Näfels, Lintharena",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.107439,
+                      "y": 9.063951
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:42:00+0100",
+                  "arrivalTimestamp": 1607362920,
+                  "departure": "2020-12-07T18:42:00+0100",
+                  "departureTimestamp": 1607362920,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8573885",
+                    "name": "Näfels, Lintharena",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.107439,
+                      "y": 9.063951
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8579532",
+                    "name": "Näfels, Schönegg",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.105075,
+                      "y": 9.065724
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:42:00+0100",
+                  "arrivalTimestamp": 1607362920,
+                  "departure": "2020-12-07T18:42:00+0100",
+                  "departureTimestamp": 1607362920,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8579532",
+                    "name": "Näfels, Schönegg",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.105075,
+                      "y": 9.065724
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8577734",
+                    "name": "Näfels, Letz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.101785,
+                      "y": 9.062989
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:43:00+0100",
+                  "arrivalTimestamp": 1607362980,
+                  "departure": "2020-12-07T18:43:00+0100",
+                  "departureTimestamp": 1607362980,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8577734",
+                    "name": "Näfels, Letz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.101785,
+                      "y": 9.062989
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8573886",
+                    "name": "Näfels, Freulerpalast",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.099909,
+                      "y": 9.062655
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:43:00+0100",
+                  "arrivalTimestamp": 1607362980,
+                  "departure": "2020-12-07T18:43:00+0100",
+                  "departureTimestamp": 1607362980,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8573886",
+                    "name": "Näfels, Freulerpalast",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.099909,
+                      "y": 9.062655
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8579950",
+                    "name": "Näfels, Post",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.09949,
+                      "y": 9.064316
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:44:00+0100",
+                  "arrivalTimestamp": 1607363040,
+                  "departure": "2020-12-07T18:44:00+0100",
+                  "departureTimestamp": 1607363040,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8579950",
+                    "name": "Näfels, Post",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.09949,
+                      "y": 9.064316
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8573887",
+                    "name": "Näfels-Mollis, Bahnhof",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.098494,
+                      "y": 9.069806
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:48:00+0100",
+                  "arrivalTimestamp": 1607363280,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": null,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8573887",
+                    "name": "Näfels-Mollis, Bahnhof",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.098494,
+                      "y": 9.069806
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8595640",
+                "name": "Ziegelbrücke, Bahnhof Süd",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136576,
+                  "y": 9.05914
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:33:00+0100",
+              "arrivalTimestamp": 1607362380,
+              "departure": "2020-12-07T18:34:00+0100",
+              "departureTimestamp": 1607362440,
+              "delay": null,
+              "platform": null,
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8595640",
+                "name": "Ziegelbrücke, Bahnhof Süd",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136576,
+                  "y": 9.05914
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8573887",
+                "name": "Näfels-Mollis, Bahnhof",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.098494,
+                  "y": 9.069806
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:48:00+0100",
+              "arrivalTimestamp": 1607363280,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": null,
+              "platform": null,
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8573887",
+                "name": "Näfels-Mollis, Bahnhof",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.098494,
+                  "y": 9.069806
+                },
+                "distance": null
+              }
+            }
+          }
+        ]
+      },
+      {
+        "from": {
+          "station": {
+            "id": "8509002",
+            "name": "Landquart",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 46.967437,
+              "y": 9.554043
+            },
+            "distance": null
+          },
+          "arrival": null,
+          "arrivalTimestamp": null,
+          "departure": "2020-12-07T18:25:00+0100",
+          "departureTimestamp": 1607361900,
+          "delay": 1,
+          "platform": "3",
+          "prognosis": {
+            "platform": null,
+            "arrival": null,
+            "departure": "2020-12-07T18:26:00+0100",
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "realtimeAvailability": null,
+          "location": {
+            "id": "8509002",
+            "name": "Landquart",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 46.967437,
+              "y": 9.554043
+            },
+            "distance": null
+          }
+        },
+        "to": {
+          "station": {
+            "id": "8503227",
+            "name": "Näfels-Mollis",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 47.098717,
+              "y": 9.069958
+            },
+            "distance": null
+          },
+          "arrival": "2020-12-07T19:08:00+0100",
+          "arrivalTimestamp": 1607364480,
+          "departure": null,
+          "departureTimestamp": null,
+          "delay": null,
+          "platform": "10",
+          "prognosis": {
+            "platform": null,
+            "arrival": null,
+            "departure": null,
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "realtimeAvailability": null,
+          "location": {
+            "id": "8503227",
+            "name": "Näfels-Mollis",
+            "score": null,
+            "coordinate": {
+              "type": "WGS84",
+              "x": 47.098717,
+              "y": 9.069958
+            },
+            "distance": null
+          }
+        },
+        "duration": "00d00:42:00",
+        "transfers": 1,
+        "service": null,
+        "products": [
+          "RE",
+          "S6"
+        ],
+        "capacity1st": null,
+        "capacity2nd": null,
+        "sections": [
+          {
+            "journey": {
+              "name": "RE 3482",
+              "category": "RE",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "RE 3482",
+              "operator": "SBB",
+              "to": "Zürich HB",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8509002",
+                    "name": "Landquart",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 46.967437,
+                      "y": 9.554043
+                    },
+                    "distance": null
+                  },
+                  "arrival": null,
+                  "arrivalTimestamp": null,
+                  "departure": "2020-12-07T18:25:00+0100",
+                  "departureTimestamp": 1607361900,
+                  "delay": 1,
+                  "platform": "3",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:26:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509002",
+                    "name": "Landquart",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 46.967437,
+                      "y": 9.554043
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509004",
+                    "name": "Bad Ragaz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.01025,
+                      "y": 9.505294
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:30:00+0100",
+                  "arrivalTimestamp": 1607362200,
+                  "departure": "2020-12-07T18:31:00+0100",
+                  "departureTimestamp": 1607362260,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:31:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509004",
+                    "name": "Bad Ragaz",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.01025,
+                      "y": 9.505294
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:35:00+0100",
+                  "arrivalTimestamp": 1607362500,
+                  "departure": "2020-12-07T18:37:00+0100",
+                  "departureTimestamp": 1607362620,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:37:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509411",
+                    "name": "Sargans",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.045353,
+                      "y": 9.445396
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8509414",
+                    "name": "Walenstadt",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.119869,
+                      "y": 9.312985
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:45:00+0100",
+                  "arrivalTimestamp": 1607363100,
+                  "departure": "2020-12-07T18:45:00+0100",
+                  "departureTimestamp": 1607363100,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T18:45:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8509414",
+                    "name": "Walenstadt",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.119869,
+                      "y": 9.312985
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:58:00+0100",
+                  "arrivalTimestamp": 1607363880,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": 0,
+                  "platform": "6",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": "2020-12-07T18:58:00+0100",
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8509002",
+                "name": "Landquart",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 46.967437,
+                  "y": 9.554043
+                },
+                "distance": null
+              },
+              "arrival": null,
+              "arrivalTimestamp": null,
+              "departure": "2020-12-07T18:25:00+0100",
+              "departureTimestamp": 1607361900,
+              "delay": 1,
+              "platform": "3",
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": "2020-12-07T18:26:00+0100",
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8509002",
+                "name": "Landquart",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 46.967437,
+                  "y": 9.554043
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:58:00+0100",
+              "arrivalTimestamp": 1607363880,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": 0,
+              "platform": "6",
+              "prognosis": {
+                "platform": null,
+                "arrival": "2020-12-07T18:58:00+0100",
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              }
+            }
+          },
+          {
+            "journey": {
+              "name": "S6 11665",
+              "category": "S",
+              "subcategory": null,
+              "categoryCode": null,
+              "number": "6",
+              "operator": "SBB",
+              "to": "Linthal",
+              "passList": [
+                {
+                  "station": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T18:58:00+0100",
+                  "arrivalTimestamp": 1607363880,
+                  "departure": "2020-12-07T19:03:00+0100",
+                  "departureTimestamp": 1607364180,
+                  "delay": 0,
+                  "platform": "10",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T19:03:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503225",
+                    "name": "Ziegelbrücke",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.136149,
+                      "y": 9.06005
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503226",
+                    "name": "Nieder- und Oberurnen",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.12236,
+                      "y": 9.062387
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T19:05:00+0100",
+                  "arrivalTimestamp": 1607364300,
+                  "departure": "2020-12-07T19:05:00+0100",
+                  "departureTimestamp": 1607364300,
+                  "delay": 0,
+                  "platform": null,
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": null,
+                    "departure": "2020-12-07T19:05:00+0100",
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503226",
+                    "name": "Nieder- und Oberurnen",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.12236,
+                      "y": 9.062387
+                    },
+                    "distance": null
+                  }
+                },
+                {
+                  "station": {
+                    "id": "8503227",
+                    "name": "Näfels-Mollis",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.098717,
+                      "y": 9.069958
+                    },
+                    "distance": null
+                  },
+                  "arrival": "2020-12-07T19:08:00+0100",
+                  "arrivalTimestamp": 1607364480,
+                  "departure": null,
+                  "departureTimestamp": null,
+                  "delay": 0,
+                  "platform": "1",
+                  "prognosis": {
+                    "platform": null,
+                    "arrival": "2020-12-07T19:08:00+0100",
+                    "departure": null,
+                    "capacity1st": null,
+                    "capacity2nd": null
+                  },
+                  "realtimeAvailability": null,
+                  "location": {
+                    "id": "8503227",
+                    "name": "Näfels-Mollis",
+                    "score": null,
+                    "coordinate": {
+                      "type": "WGS84",
+                      "x": 47.098717,
+                      "y": 9.069958
+                    },
+                    "distance": null
+                  }
+                }
+              ],
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "walk": null,
+            "departure": {
+              "station": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T18:58:00+0100",
+              "arrivalTimestamp": 1607363880,
+              "departure": "2020-12-07T19:03:00+0100",
+              "departureTimestamp": 1607364180,
+              "delay": 0,
+              "platform": "10",
+              "prognosis": {
+                "platform": null,
+                "arrival": null,
+                "departure": "2020-12-07T19:03:00+0100",
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503225",
+                "name": "Ziegelbrücke",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.136149,
+                  "y": 9.06005
+                },
+                "distance": null
+              }
+            },
+            "arrival": {
+              "station": {
+                "id": "8503227",
+                "name": "Näfels-Mollis",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.098717,
+                  "y": 9.069958
+                },
+                "distance": null
+              },
+              "arrival": "2020-12-07T19:08:00+0100",
+              "arrivalTimestamp": 1607364480,
+              "departure": null,
+              "departureTimestamp": null,
+              "delay": 0,
+              "platform": "1",
+              "prognosis": {
+                "platform": null,
+                "arrival": "2020-12-07T19:08:00+0100",
+                "departure": null,
+                "capacity1st": null,
+                "capacity2nd": null
+              },
+              "realtimeAvailability": null,
+              "location": {
+                "id": "8503227",
+                "name": "Näfels-Mollis",
+                "score": null,
+                "coordinate": {
+                  "type": "WGS84",
+                  "x": 47.098717,
+                  "y": 9.069958
+                },
+                "distance": null
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "from": {
+      "id": "8509002",
+      "name": "Landquart",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.967437,
+        "y": 9.554043
+      },
+      "distance": null
+    },
+    "to": {
+      "id": "8503227",
+      "name": "Näfels-Mollis",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 47.098717,
+        "y": 9.069958
+      },
+      "distance": null
+    },
+    "stations": {
+      "from": [
+        {
+          "id": "8509002",
+          "name": "Landquart",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.967437,
+            "y": 9.554043
+          },
+          "distance": null
+        }
+      ],
+      "to": [
+        {
+          "id": "8503227",
+          "name": "Näfels-Mollis",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 47.098717,
+            "y": 9.069958
+          },
+          "distance": null
+        }
+      ]
+    }
+  }
