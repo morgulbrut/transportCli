@@ -9,9 +9,15 @@ as published by Sam Hocevar. See the LICENSE file or
 package cmd
 
 import (
+	"fmt"
+	"os"
+	"runtime"
 	"strings"
+	"time"
 
+	"github.com/jedib0t/go-pretty/table"
 	"github.com/morgulbrut/transportCli/webreq"
+	"github.com/morgulbrut/transportCli/webreq/parsejson"
 	"github.com/spf13/cobra"
 )
 
@@ -60,6 +66,36 @@ Stationnames longer than one word must be written in quotation marks.
 			PrintStation(webreq.Station(params.String()))
 		}
 	},
+}
+
+func PrintConnection(resp parsejson.RespConnection) {
+
+	t := table.NewWriter()
+	t.SetOutputMirror(os.Stdout)
+	if runtime.GOOS == "windows" {
+		t.SetStyle(table.StyleDouble)
+	} else {
+		t.SetStyle(table.StyleColoredDark)
+	}
+	//t.AppendHeader(table.Row{"Departure", "Time", "Platform", "Arrival", "Time", "Platform", "Duration", "Changes"})
+
+	t.AppendHeader(table.Row{"Departure", "Time", "P.", "Arrival", "Time", "P."})
+
+	for _, ele := range resp.Connections {
+		t.AppendSeparator()
+		tfs := "2006-01-02T15:04:05-0700"
+		for _, sec := range ele.Sections {
+			td, _ := time.Parse(tfs, sec.Departure.Departure)
+			ta, _ := time.Parse(tfs, sec.Arrival.Arrival)
+			tds := fmt.Sprintf("%02d:%02d", td.Hour(), td.Minute())
+			tas := fmt.Sprintf("%02d:%02d", ta.Hour(), ta.Minute())
+			//t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
+			//t.AppendRow(table.Row{ele.From.Station.Name, tds, ele.From.Platform, ele.To.Station.Name, tas, ele.To.Platform, durs, ele.Sections})
+			t.AppendRow(table.Row{sec.Departure.Station.Name, tds, sec.Departure.Platform, sec.Arrival.Station.Name, tas, sec.Arrival.Platform})
+		}
+		t.AppendRow(table.Row{"Transfers", ele.Transfers, "", "Duration", ele.Duration})
+	}
+	t.Render()
 }
 
 func init() {
