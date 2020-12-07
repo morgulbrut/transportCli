@@ -1,0 +1,16 @@
+type LocationRespose struct {
+	Stations []Stations `json:"stations"`
+}
+type Coordinate struct {
+	Type string  `json:"type"`
+	X    float64 `json:"x"`
+	Y    float64 `json:"y"`
+}
+type Stations struct {
+	ID         string      `json:"id"`
+	Name       string      `json:"name"`
+	Score      interface{} `json:"score"`
+	Coordinate Coordinate  `json:"coordinate"`
+	Distance   interface{} `json:"distance"`
+	Icon       string      `json:"icon"`
+}
