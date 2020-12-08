@@ -79,21 +79,36 @@ func PrintConnection(resp parsejson.RespConnection) {
 	}
 	//t.AppendHeader(table.Row{"Departure", "Time", "Platform", "Arrival", "Time", "Platform", "Duration", "Changes"})
 
-	t.AppendHeader(table.Row{"Departure", "Time", "P.", "Arrival", "Time", "P."})
+	t.AppendHeader(table.Row{"Station", "Arr.", "P.", "Dep.", "P."})
 
 	for _, ele := range resp.Connections {
 		t.AppendSeparator()
+		var ta time.Time
+		var tas string
+		var arpl string
 		tfs := "2006-01-02T15:04:05-0700"
-		for _, sec := range ele.Sections {
+		for i, sec := range ele.Sections {
 			td, _ := time.Parse(tfs, sec.Departure.Departure)
-			ta, _ := time.Parse(tfs, sec.Arrival.Arrival)
 			tds := fmt.Sprintf("%02d:%02d", td.Hour(), td.Minute())
-			tas := fmt.Sprintf("%02d:%02d", ta.Hour(), ta.Minute())
-			//t.AppendRow(table.Row{tms, ele.To, ele.PassList[0].Platform, ele.Category, ele.Number})
-			//t.AppendRow(table.Row{ele.From.Station.Name, tds, ele.From.Platform, ele.To.Station.Name, tas, ele.To.Platform, durs, ele.Sections})
-			t.AppendRow(table.Row{sec.Departure.Station.Name, tds, sec.Departure.Platform, sec.Arrival.Station.Name, tas, sec.Arrival.Platform})
+			if i == 0 {
+				t.AppendRow(table.Row{sec.Departure.Station.Name, "", "", tds, sec.Departure.Platform})
+			} else if i == len(ele.Sections)-1 {
+				t.AppendRow(table.Row{sec.Departure.Station.Name, tas, arpl, tds, sec.Departure.Platform})
+				ta, _ = time.Parse(tfs, sec.Arrival.Arrival)
+				tas = fmt.Sprintf("%02d:%02d", ta.Hour(), ta.Minute())
+				arpl = sec.Arrival.Platform
+				t.AppendRow(table.Row{sec.Arrival.Station.Name, tas, arpl, ""})
+			} else {
+				t.AppendRow(table.Row{sec.Departure.Station.Name, tas, arpl, tds, sec.Departure.Platform})
+			}
+			ta, _ = time.Parse(tfs, sec.Arrival.Arrival)
+			tas = fmt.Sprintf("%02d:%02d", ta.Hour(), ta.Minute())
+			arpl = sec.Arrival.Platform
 		}
-		t.AppendRow(table.Row{"Transfers", ele.Transfers, "", "Duration", ele.Duration})
+		dur := ele.Duration
+		dur = strings.Split(dur, "d")[1]
+		dur = strings.Join(strings.Split(dur, ":")[0:2], ":")
+		t.AppendRow(table.Row{"Trans./Dur.", ele.Transfers, "", dur})
 	}
 	t.Render()
 }
