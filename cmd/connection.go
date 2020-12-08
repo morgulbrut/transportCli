@@ -90,14 +90,19 @@ func PrintConnection(resp parsejson.RespConnection) {
 		for i, sec := range ele.Sections {
 			td, _ := time.Parse(tfs, sec.Departure.Departure)
 			tds := fmt.Sprintf("%02d:%02d", td.Hour(), td.Minute())
-			if i == 0 {
-				t.AppendRow(table.Row{sec.Departure.Station.Name, "", "", tds, sec.Departure.Platform})
-			} else if i == len(ele.Sections)-1 {
-				t.AppendRow(table.Row{sec.Departure.Station.Name, tas, arpl, tds, sec.Departure.Platform})
+
+			if i == len(ele.Sections)-1 {
+				if i == 0 {
+					t.AppendRow(table.Row{sec.Departure.Station.Name, "", "", tds, sec.Departure.Platform})
+				} else {
+					t.AppendRow(table.Row{sec.Departure.Station.Name, tas, arpl, tds, sec.Departure.Platform})
+				}
 				ta, _ = time.Parse(tfs, sec.Arrival.Arrival)
 				tas = fmt.Sprintf("%02d:%02d", ta.Hour(), ta.Minute())
 				arpl = sec.Arrival.Platform
 				t.AppendRow(table.Row{sec.Arrival.Station.Name, tas, arpl, ""})
+			} else if i == 0 {
+				t.AppendRow(table.Row{sec.Departure.Station.Name, "", "", tds, sec.Departure.Platform})
 			} else {
 				t.AppendRow(table.Row{sec.Departure.Station.Name, tas, arpl, tds, sec.Departure.Platform})
 			}
