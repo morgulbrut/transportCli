@@ -88,7 +88,7 @@ func PrintStation(resp parsejson.RespStation) {
 	if runtime.GOOS == "windows" {
 		t.SetStyle(table.StyleDouble)
 	} else {
-		t.SetStyle(table.StyleColoredDark)
+		t.SetStyle(table.StyleColoredBlackOnRedWhite)
 	}
 	t.AppendHeader(table.Row{"Time", "Destination", "Platform", "Category ", "Number"})
 
